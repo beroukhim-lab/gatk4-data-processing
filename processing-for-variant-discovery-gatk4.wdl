@@ -333,7 +333,7 @@ task SamToFastqAndBwaMem {
     docker: docker_image
     memory: "~{mem_size_gb} GiB"
     cpu: num_cpu
-    disks: "local-disk " + 400 + " HDD"
+    disks: "local-disk 400 HDD"
   }
   output {
     File output_bam = "~{output_bam_basename}.bam"
@@ -396,7 +396,7 @@ task MergeBamAlignment {
     preemptible: preemptible_tries
     docker: docker_image
     memory: "~{mem_size_gb} GiB"
-    disks: "local-disk " + 400 + " HDD"
+    disks: "local-disk 400 HDD"
   }
   output {
     File output_bam = "~{output_bam_basename}.bam"
