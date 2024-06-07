@@ -1,7 +1,7 @@
 # gatk4-data-processing
 
 ### Purpose :
-Workflows for processing high-throughput sequencing data for variant discovery with GATK4 and related tools.
+Workflow with increased disk space as hard-coded runtime parameter to preserve call cashing for failed tasks.
 
 ### processing-for-variant-discovery-gatk4 :
 The processing-for-variant-discovery-gatk4 WDL pipeline implements data pre-processing according to the [GATK Best Practices](https://gatk.broadinstitute.org/hc/en-us/articles/360035535912). The workflow takes as input an unmapped BAM list file (text file containing paths to unmapped bam files) to perform preprocessing tasks such as mapping, marking duplicates, and base recalibration. It produces a single BAM file and its index suitable for [variant discovery analysis](https://gatk.broadinstitute.org/hc/en-us/articles/360035535932-Germline-short-variant-discovery-SNPs-Indels-) using tools such as Haplotypecaller.
